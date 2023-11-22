@@ -70,8 +70,8 @@ const Home = () => {
             setCurrentStage={setCurrentStage}
           />
           <Plan
-            planScale={planScale}
-            planPosition={planPosition}
+        scale={planScale}
+          position={planPosition}
             isRotating={isRotating}
             rotation={[0, 20, 0]}
           />

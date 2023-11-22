@@ -34,7 +34,7 @@ const Contact = () => {
       )
       .then(() => {
         setIsLoading(false);
-        showAlert({ show: true,type: "success", message: "Message Sent Successfully"})
+        showAlert({ show: true,type: "success", text: "Message Sent Successfully"})
         // TODO : Hide Alert Message
         setTimeout(() => {
           hideAlert(); 
@@ -47,7 +47,7 @@ const Contact = () => {
         setIsLoading(false);
         setCurrentAnimation("idle");
         console.log(error);
-        showAlert({show: true, type: "error", message: "Something Went Wrong"})
+        showAlert({show: true, type: "error", text: "Something Went Wrong"})
         // TODO : Show Error Message
       });
   };
