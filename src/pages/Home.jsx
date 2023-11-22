@@ -11,7 +11,7 @@ import Plan from "../models/Plan";
 }
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
- 
+  const [currentStage, setCurrentStage] = useState(1);
   const adjestIslandForScreenSize = () => {
     let screenScale = null;
     let screenPositionl = [0, -6.5, -43];
@@ -25,7 +25,7 @@ const Home = () => {
     return [screenScale, screenPositionl, rotation];
   };
   const adjestPlanForScreenSize = () => {
-     let screenScale, screenPositionl;
+    let screenScale, screenPositionl;
 
     if (Window.innerWidth < 768) {
       screenScale = [1.5, 1.5, 1.5];
@@ -56,19 +56,20 @@ const Home = () => {
             intensity={1}
           />
           <Bird />
-          <Sky />
+          <Sky isRotating={isRotating} />
           <Island
             position={islandPosition}
             scale={islandScale}
             rotation={islandRotation}
             isRotating={isRotating}
             setIsRotating={setIsRotating}
+            setCurrentStage={setCurrentStage}
           />
-          <Plan 
-          planScale =  {planScale}
-          planPosition = {planPosition}
-          isRotating={isRotating}
-          rotation = {[0,20,0]}
+          <Plan
+            planScale={planScale}
+            planPosition={planPosition}
+            isRotating={isRotating}
+            rotation={[0, 20, 0]}
           />
         </Suspense>
       </Canvas>
