@@ -59,7 +59,6 @@ export function Island({
 
       // Update the island's rotation based on the mouse/touch movement
       islandRef.current.rotation.y += delta * 0.01 * Math.PI;
-
       // Update the reference for the last clientX position
       lastX.current = clientX;
 
