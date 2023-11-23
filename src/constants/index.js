@@ -207,7 +207,7 @@ export const projects = [
     {
         iconUrl: snapgram,
         theme: 'btn-back-pink',
-        name: 'Proptopia',
+        name: 'Promptopia',
         description: 'Built a web application for share thoughts and prompts for creative writing, helping users find inspiration for their next story.',
         link: 'https://github.com/Darshit02/Prompts',
     },
